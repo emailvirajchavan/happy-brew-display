@@ -33,9 +33,9 @@ export const Hero = () => {
             View Menu
           </Button>
           <Button 
-            variant="outline" 
+            variant="secondary" 
             size="lg"
-            className="border-cream text-cream hover:bg-cream hover:text-primary font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-cream/20 backdrop-blur-sm text-cream border-cream/50 hover:bg-cream hover:text-coffee-dark font-semibold px-8 py-3 rounded-full transition-all duration-300 hover:scale-105 border-2"
           >
             Visit Us
           </Button>

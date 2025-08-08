@@ -2,6 +2,9 @@ import { MenuCard } from "@/components/ui/menu-card";
 import avocadoToastImage from "@/assets/food-avocado-toast.jpg";
 import paniniImage from "@/assets/food-panini.jpg";
 import saladImage from "@/assets/food-salad.jpg";
+import wrapImage from "@/assets/food-wrap.jpg";
+import sandwichImage from "@/assets/food-sandwich.jpg";
+import bowlImage from "@/assets/food-bowl.jpg";
 
 const foodItems = [
   {
@@ -21,6 +24,24 @@ const foodItems = [
     description: "Mixed greens, seasonal vegetables, quinoa, and house-made vinaigrette for a healthy, satisfying meal.",
     price: "$11.75",
     image: saladImage
+  },
+  {
+    title: "Breakfast Wrap",
+    description: "Scrambled eggs, fresh vegetables, cheese, and herbs wrapped in a warm tortilla.",
+    price: "$10.95",
+    image: wrapImage
+  },
+  {
+    title: "Gourmet Sandwich",
+    description: "Premium ingredients layered on freshly baked artisanal bread with seasonal accompaniments.",
+    price: "$14.25",
+    image: sandwichImage
+  },
+  {
+    title: "Power Bowl",
+    description: "Nutritious quinoa bowl with roasted vegetables, nuts, seeds, and tahini dressing.",
+    price: "$13.75",
+    image: bowlImage
   }
 ];
 
@@ -37,12 +58,14 @@ export const FoodMenu = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {foodItems.map((item, index) => (
-            <div key={item.title} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <MenuCard {...item} />
-            </div>
-          ))}
+        <div className="overflow-x-auto pb-4">
+          <div className="flex gap-6 w-max">
+            {foodItems.map((item, index) => (
+              <div key={item.title} className="w-80 flex-shrink-0 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <MenuCard {...item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
