@@ -3,6 +3,7 @@ import { CoffeeMenu } from "@/components/sections/CoffeeMenu";
 import { FoodMenu } from "@/components/sections/FoodMenu";
 import { About } from "@/components/sections/About";
 import { Footer } from "@/components/sections/Footer";
+import { WhatsAppChat } from "@/components/ui/whatsapp-chat";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <FoodMenu />
       <About />
       <Footer />
+      <WhatsAppChat />
     </div>
   );
 };
